@@ -72,7 +72,7 @@ export const getCustomerLink = (body) => async dispatch => {
         const { data } = await axios.post(`https://jj3e8so6sf.execute-api.ap-southeast-1.amazonaws.com/dev/link`, body, {
             headers: {
                 'x-api-key': 'c0c6e850-cf4b9132-311c-4560-92d1-a163310bb7da-c0c6e850-ae53-43b5-c0c6e850-ae53-43b5',
-                'Access-Control-Allow-Origin': "*",
+                //'Access-Control-Allow-Origin': "*",
             }
         });
         const { message:msg, status } = data;
@@ -100,7 +100,7 @@ export const getMediaUploadUrl = (mediaData) => async dispatch => {
         const { data } = await axios.post(`https://jj3e8so6sf.execute-api.ap-southeast-1.amazonaws.com/dev/upload/link`, mediaData, {
             headers: {
                 'authorization' : `${localStorage.getItem('hash_token')}`,
-                'Access-Control-Allow-Origin': "*"
+                //'Access-Control-Allow-Origin': "*"
             }
         });
         const { message:msg, status } = data;
@@ -150,7 +150,7 @@ export const updateLocation = (locationData) => async dispatch => {
         const { data } = await axios.put(`https://jj3e8so6sf.execute-api.ap-southeast-1.amazonaws.com/dev/location`, locationData, {
             headers: {
                 'authorization' : `${localStorage.getItem('hash_token')}`,
-                'Access-Control-Allow-Origin': "*"
+                //'Access-Control-Allow-Origin': "*"
             }
         });
         const { message:msg, status } = data;
